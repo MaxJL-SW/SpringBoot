@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Pilots</title>
+</head>
+<body>
+    <h1>Pilots with Flight Count</h1>
+    <table>
+        <tr>
+            <th>Pilot Name</th>
+            <th>Flight Count</th>
+        </tr>
+        <tr th:each="pilotStat : ${pilotsWithFlightCount}">
+            <td th:text="${pilotStat[0].firstname + ' ' + pilotStat[0].lastname}"></td>
+            <td th:text="${pilotStat[1]}"></td>
+        </tr>
+    </table>
+</body>
+</html>
